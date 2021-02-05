@@ -8,6 +8,11 @@ namespace JaratKezelo
 {
     class Jarat
     {
+        public string JaratSzam;
+        public string HonnanRepter;
+        public string HovaRepter;
+        public DateTime Indulas;
+        public int Keses;
 
     }
 }
