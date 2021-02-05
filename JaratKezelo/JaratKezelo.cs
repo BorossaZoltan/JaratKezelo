@@ -75,9 +75,10 @@ namespace JaratKezelo
                 if (item.HonnanRepter == repter)
                 {
                     jaratSzamok.Add(item.JaratSzam);
+                    return jaratSzamok;
                 }
             }
-            return jaratSzamok;
+            throw new ArgumentException($"Nincs ilyen reptér: ({repter})");
         }
 
 
