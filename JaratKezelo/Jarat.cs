@@ -14,13 +14,13 @@ namespace JaratKezelo
         public DateTime Indulas;
         public int Keses;
 
-        public Jarat(string jaratSzam, string honnanRepter, string hovaRepter, DateTime indulas, int keses)
+        public Jarat(string jaratSzam, string honnanRepter, string hovaRepter, DateTime indulas)
         {
             JaratSzam = jaratSzam;
             HonnanRepter = honnanRepter;
             HovaRepter = hovaRepter;
             Indulas = indulas;
-            Keses = keses;
+            Keses = 0;
         }
 
 
