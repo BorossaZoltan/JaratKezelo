@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,6 +41,8 @@ namespace JaratKezelo
                     if (item.Keses+keses >= 0)
                     {
                         item.Keses += keses;
+                        Debug.WriteLine(item.JaratSzam + ":   " + item.Keses);
+                        return;
                     }
                     else
                     {
@@ -48,6 +51,7 @@ namespace JaratKezelo
 
                 }
             }
+            throw new ArgumentException($"Ezzel a járatszámmal nincs járat: ({jaratSzam})");
         }
 
         public DateTime MikorIndul(string jaratSzam)

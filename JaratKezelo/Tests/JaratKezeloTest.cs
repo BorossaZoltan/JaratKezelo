@@ -26,13 +26,32 @@ namespace JaratKezelo.Tests
             
         }
 
+        [TestCase]
+        public void KesesTeszt()
+        {
+            j.UjJarat("111", "Budapest", "London", new DateTime(2021, 5, 25, 15, 0, 0));
+            j.Keses("111", 5);
+            j.Keses("111", 5);
+            j.Keses("111", -5);
+            
+        }
+
+        [TestCase]
+        public void MikorIndulTeszt()
+        {
+            j.UjJarat("111", "Budapest", "London", new DateTime(2021, 5, 25, 15, 0, 0));
+            j.Keses("111", 5);
+            j.MikorIndul("111");
+            Assert.AreEqual(new DateTime(2021, 5, 25, 15, 5, 0), j.MikorIndul("111"));
+        }
 
 
 
 
-        
 
-        
+
+
+
 
 
     }
