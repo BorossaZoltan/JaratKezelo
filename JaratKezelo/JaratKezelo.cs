@@ -62,7 +62,15 @@ namespace JaratKezelo
 
         public List<string> JaratokRepuloterrol(string repter)
         {
-
+            List<string> jaratSzamok = new List<string>();
+            foreach (var item in lista)
+            {
+                if (item.HonnanRepter == repter)
+                {
+                    jaratSzamok.Add(item.JaratSzam);
+                }
+            }
+            return jaratSzamok;
         }
 
 
