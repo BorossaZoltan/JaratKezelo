@@ -7,8 +7,33 @@ using NUnit.Framework;
 
 namespace JaratKezelo.Tests
 {
+    [TestFixture]
     class JaratKezeloTest
     {
+        JaratKezelo j;
+        [SetUp]
+        public void SetUp()
+        {
+            j = new JaratKezelo();
+        }
+
+        [TestCase]
+        public void UjJaratFelvetele()
+        {
+            j.UjJarat("111", "Budapest", "London", new DateTime(2021,5,25,15,0,0));
+            j.UjJarat("222", "Bukarest", "Moszkva", new DateTime(2021,5,25,12,0,0));
+            j.UjJarat("333", "Kecskemét", "Miami", new DateTime(2021,7,25,12,0,0));
+            
+        }
+
+
+
+
+
+        
+
+        
+
 
     }
 }

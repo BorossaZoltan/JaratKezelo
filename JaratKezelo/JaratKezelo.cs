@@ -26,7 +26,10 @@ namespace JaratKezelo
                 }
             }
             Jarat j = new Jarat(jaratSzam, repterHonnan, repterHova, indulas);
+            lista.Add(j);
         }
+
+        
 
         public void Keses(string jaratSzam, int keses)
         {
