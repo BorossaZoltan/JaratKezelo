@@ -34,22 +34,30 @@ namespace JaratKezelo
             {
                 if (item.JaratSzam == jaratSzam)
                 {
-                    item.Keses += keses;
+                    if (item.Keses+keses >= 0)
+                    {
+                        item.Keses += keses;
+                    }
+                    else
+                    {
+                        throw new NegativKesesException(jaratSzam, keses);
+                    }
+
                 }
             }
         }
 
-        public DateTime MikorIndul(string jaratszam)
+        public DateTime MikorIndul(string jaratSzam)
         {
             foreach (var item in lista)
             {
-                if (item.JaratSzam == jaratszam)
+                if (item.JaratSzam == jaratSzam)
                 {
-                    return item.Indulas;
+                    return item.Indulas.AddMinutes(item.Keses);
                 }
             }
+            throw new ArgumentException($"Ezzel a járatszámmal nincs járat: ({jaratSzam})");
 
-            
         }
 
         public List<string> JaratokRepuloterrol(string repter)
